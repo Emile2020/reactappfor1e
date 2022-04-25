@@ -1,29 +1,31 @@
-import React from 'react'
+import { useState } from 'react'
+import logo from './logo.svg'
 import './App.css'
+
 function App() {
+  const [count, setCount] = useState(0)
   
-  var today = new Date()
-  var br = "\n"
-  var ipbutton = "type something and click submit"
-  var time = today.getHours() + ':' + today.getMinutes()
-    function Button1(e) {
-      console.log('succes')
-      ipbutton = "sup"
-    };
   return (
-    <div className="msg-wrapper">
-        <h1><em>welcome to my site, it's currently { time } </em></h1>
-        <strong> This is a project made in <a href ="https://reactjs.org">react</a>!</strong>{ br }
-        it can update every second { br }
-        <h2><strong>All the things that react can do!</strong></h2>
-        <div className='w3-round-xlarge'>
-         <form onSubmit={Button1}> 
-          <input placeholder="type something and click submit"></input>
-          <button type='submit'>Submit</button>
-         </form>
-         { ipbutton }
-      </div>
-   </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello Vite + React!</p>
+        <p>
+          <button type="button" onClick={() => setCount((count) => count + 1)}>
+            count is: {count}
+          </button>
+        </p>
+        <p>
+          <h1><strong>What is react?</strong></h1>
+          <ul><li>React is a free framework that is popular because it's the easiest out there!.</li></ul>
+          
+        </p>
+        <p>
+          <h1><strong>What is vite?</strong></h1>
+          <ul><li>Vite is a framework that is easy and has a function that automatically updates when you are coding!</li></ul>
+        </p>
+      </header>
+    </div>
   )
 }
 
