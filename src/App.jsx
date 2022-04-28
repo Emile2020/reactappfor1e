@@ -6,6 +6,10 @@ const getnewesturl = "https://jsons.emile2021coding.repl.co/test.json"
 function button() {
   window.location.href="https://github.com/Emile2020/reactappfor1e"
 }
+const isMobile = window.matchMedia("only screen and (max-width: 500px)").matches;
+if(isMobile){
+  window.location.href = "/error.html"
+}
 async function getnewest() {
    return axios.get(getnewesturl).then(response => {
     let text = response.data.daily
@@ -19,6 +23,9 @@ async function getnewest() {
 function App() {
   const [count, setCount] = useState(0)
   getnewest()
+  if(isMobile){
+    window.location.href = "https://google.com/notavaible"
+  }
   return (
     <div className="App">
       <header className="App-header">
