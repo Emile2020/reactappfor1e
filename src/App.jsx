@@ -3,7 +3,9 @@ import { useState } from 'react'
 import './App.css'
 import axios from 'axios'
 const getnewesturl = "https://jsons.emile2021coding.repl.co/test.json"
-
+function button() {
+  window.location.href="https://github.com/Emile2020/reactappfor1e"
+}
 async function getnewest() {
    return axios.get(getnewesturl).then(response => {
     let text = response.data.daily
@@ -22,6 +24,7 @@ function App() {
       <header className="App-header">
       <img src='https://media3.giphy.com/media/iFmw13LV1hHhViPPWz/giphy.gif?cid=790b761119325c966fcf3fa30906fa9248b993ce5bf41708&rid=giphy.gif&ct=s' className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
+        <button className='button-24' onClick={button}>Want to see how it is made? Click here then!</button>
         <div className='navbar'>
           <a href="#What is react?">What is react?</a>
           <a href="#What is vite?">What is vite?</a>
