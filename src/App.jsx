@@ -1,4 +1,5 @@
 import { useState } from 'react'
+/* welcome to my site! */
 import './App.css'
 import axios from 'axios'
 const getnewesturl = "https://jsons.emile2021coding.repl.co/test.json"
@@ -72,7 +73,7 @@ function App() {
         </p> <p><h1>Newest text from me!</h1>
         <ul><li>Here you can see something from a json file.</li></ul>
         <div id='daily'></div>
-        <img src="" id="img" />
+        <img src="https://i.pinimg.com/originals/49/23/29/492329d446c422b0483677d0318ab4fa.gif" id="img" />
         </p>
       <footer>Made by <a href="https://twitter.com/Emidblol">@emidblol</a>. </footer>
       </header>
