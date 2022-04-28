@@ -80,7 +80,7 @@ function App() {
         </p>
       <footer>Made by <a href="https://twitter.com/Emidblol">@emidblol</a>. </footer>
       </header>
-      
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d557e2d8498247659b974fc366da0269"}'></script>
     </div>
   )
 }
