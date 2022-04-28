@@ -100,6 +100,11 @@ html {
 .App-link {
   color: #61dafb;
 }
+footer {
+  text-align: center;
+  padding: 3px;
+  color: white;
+}
 
 @keyframes App-logo-spin {
   from {

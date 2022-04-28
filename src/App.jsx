@@ -2,10 +2,15 @@ import { useState } from 'react'
 import './App.css'
 import axios from 'axios'
 const getnewesturl = "https://jsons.emile2021coding.repl.co/test.json"
-const getnewest = () => {
-   return axios.get(getnewesturl).then(respone => {
-    let text = respone.data.daily
+
+async function getnewest() {
+   return axios.get(getnewesturl).then(response => {
+    let text = response.data.daily
+    console.log(text)
+    let image = response.data.message
+    console.log(image)
     document.getElementById("daily").innerHTML = text
+    document.getElementById("img").src = image
   })
 }
 function App() {
@@ -63,10 +68,15 @@ function App() {
               </ul>
             </li>
           </ul>
-        </p> <h1>Newest text from me!</h1>
+          
+        </p> <p><h1>Newest text from me!</h1>
+        <ul><li>Here you can see something from a json file.</li></ul>
         <div id='daily'></div>
-
+        <img src="" id="img" />
+        </p>
+      <footer>Made by <a href="https://twitter.com/Emidblol">@emidblol</a>. </footer>
       </header>
+      
     </div>
   )
 }
